@@ -87,7 +87,8 @@
           </button>
         </article>
 
-        <article class="product-card">
+        <article class="product-card product-card--discount">
+          <span class="product-card__badge">Скидка</span>
           <h3 class="product-card__title">Товар 2</h3>
           <p class="product-card__description">Краткое описание учебного товара.</p>
           <p class="product-card__price">Цена: 1500 руб.</p>
@@ -101,6 +102,7 @@
         </article>
 
         <article class="product-card">
+          <span class="product-card__badge product-card__badge--new">Новинка</span>
           <h3 class="product-card__title">Товар 3</h3>
           <p class="product-card__description">Краткое описание учебного товара.</p>
           <p class="product-card__price">Цена: 2000 руб.</p>
@@ -242,5 +244,13 @@
     Форма успешно отправлена!
   </p>
 
+  <button
+    class="scroll-top"
+    type="button"
+    aria-label="Наверх"
+    onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+  >
+    ↑
+  </button>
 </body>
 </html>

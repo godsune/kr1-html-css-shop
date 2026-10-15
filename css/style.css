@@ -85,6 +85,15 @@
     background-color: var(--color-primary-dark);
   }
 
+  .button--primary:active {
+  transform: scale(0.98);
+  background-color: var(--color-primary-dark);
+}
+
+.button--secondary:active {
+  transform: scale(0.98);
+}
+
   .button--secondary {
     color: var(--color-primary);
     background-color: transparent;
@@ -204,6 +213,11 @@
   .product-card:hover {
     border-color: var(--color-primary);
   }
+
+  .product-card:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(0, 87, 184, 0.15);
+}
 
   .product-card__title {
     margin: 0;
@@ -355,12 +369,15 @@
   }
 
   .catalog-filters {
-    grid-area: filters;
-    padding: var(--space-md);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    background-color: var(--color-surface);
-  }
+  grid-area: filters;
+  position: sticky;
+  top: 120px;
+  align-self: start;
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+}
 
   .catalog-products {
     grid-area: products;
@@ -430,6 +447,10 @@
   font-weight: 700;
 }
 
+.product-card__badge--new {
+  background-color: var(--color-success);
+}
+
 /* Таблица характеристик */
 .product-table {
   width: 100%;
@@ -461,4 +482,32 @@
 .product-page__card {
   max-width: var(--container-width);
   margin: 0 auto var(--space-xl);
+}
+
+/* Кнопка «Наверх» */
+.scroll-top {
+  position: fixed;
+  bottom: var(--space-lg);
+  right: var(--space-lg);
+  z-index: 50;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s;
+}
+
+.scroll-top:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.scroll-top:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
 }
